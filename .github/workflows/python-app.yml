@@ -34,4 +34,5 @@ jobs:
     - name: Test with behave
       run: |
         export PYTHONPATH=src
+        pip install behave
         behave
