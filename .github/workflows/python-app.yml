@@ -26,7 +26,6 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pwd
-        mkdir /home/runner/work/sel-behave/sel-behave/features/steps
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -36,5 +35,4 @@ jobs:
     - name: Test with behave
       run: |
         export PYTHONPATH=src
-        pip install behave
         behave
