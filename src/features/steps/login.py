@@ -4,12 +4,12 @@ from behave import *
 @given(u'I launch the chrome browser')
 def step_impl(context):
     print("In Given")
-    raise NotImplementedError(u'STEP: Given I launch the chrome browser')
+    assert True
 
 
 @then(u'Enter username and password')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then Enter username and password')
+    assert context.failed is False
 
 
 @then(u'Click on login button')
