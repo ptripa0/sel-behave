@@ -35,3 +35,13 @@ jobs:
     - name: Test with behave
       run: |
         behave -f html -o reports/behave-report.html features
+        
+    - name: Allure report simple
+    # You may pin to the exact commit or the version.
+    # uses: esemi/action-allure-report@18e19222c45717d9c540260f4c2cd069f567fa11
+      uses: esemi/action-allure-report@v0.2.0
+      with:
+      # Allure test result data dir
+       results-dir: allure-results
+      # Allure report target dir
+       report-dir: allure-report
