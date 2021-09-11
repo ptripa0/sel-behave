@@ -1,12 +1,16 @@
 from behave import *
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-
+from selenium.webdriver.chrome.options import Options
 
 @given(u'I launch the chrome browser')
 def launch_browser(context):
     print("In Given")
-    context.driver = webdriver.Chrome(ChromeDriverManager().install())
+    # instantiate a chrome options object so you can set the size and headless preference
+    context.chrome_options = Options()
+    context.chrome_options.add_argument("--headless")
+    context.chrome_options.add_argument("--window-size=1920x1080")
+    context.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=context.chrome_options)
     context.driver.get("https://opensource-demo.orangehrmlive.com/")
     assert True
 
