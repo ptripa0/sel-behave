@@ -55,6 +55,4 @@ jobs:
       uses: pavi2410/html-preview-action@v2
       with:
       # The HTML file you want to preview, relative to the root of the repo
-       html_file: ./allure-report/index.html
-       run: |
-        pwd
+       html_file: reports/behave-report.html
