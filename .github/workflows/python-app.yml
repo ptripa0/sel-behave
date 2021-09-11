@@ -63,4 +63,5 @@ jobs:
       with:
        name: Run Tests
         reports/behave-report.html
-       path: "reports/behave-report.html" 
+       path: "reports/behave-report.html"
+       reporter: behave
