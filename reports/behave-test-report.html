@@ -109,17 +109,17 @@ function Collapsible_expandAllFailed()
   </head>
   <body>
     <div class="behave">
-      <div id="behave-header">
+      <div id="behave-header" class="failed">
         <div id="label">
           <h1>Behave Test Report</h1>
         </div>
         <div id="summary">
           <p id="totals">
-            <p id="feature_totals">Features: passed: 1</p>
-            <p id="scenario_totals">Scenarios: passed: 1</p>
-            <p id="step_totals">Steps: passed: 5</p>
+            <p id="feature_totals">Features: failed: 1</p>
+            <p id="scenario_totals">Scenarios: passed: 3, failed: 1</p>
+            <p id="step_totals">Steps: untested: 19</p>
           </p>
-          <p id="duration">Finished in 12.4 seconds</p>
+          <p id="duration">Finished in 17.7 seconds</p>
           <div id="expand-collapse">
             <a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a>
             <span> | </span>
@@ -131,70 +131,387 @@ function Collapsible_expandAllFailed()
       </div>
       <div class="feature">
         <h2>
-          <span class="val">Feature: D3A.io</span>
+          <span class="val">Feature: Test basic operations of d3a.io</span>
         </h2>
         <span/>
       </div>
       <div class="scenario">
-        <span class="scenario_file">features/login.feature:3</span>
+        <span class="scenario_file">features/d3a_basic_tests.feature:10</span>
         <h3 onclick="Collapsible_toggle('scenario_0')">
-          <span class="val">Scenario: Login to D3A.io application</span>
+          <span class="val">Scenario Outline: Validate that a user with invalid credentials is unable to Login to D3A.io application -- @1.1 </span>
         </h3>
         <ol class="scenario_steps" id="scenario_0">
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">Given </span>
-              <span class="step val">I launch the chrome browser</span>
-              <small class="step_duration">(12.288s)</small>
+              <span class="step val">User navigates to login page of D3A.io application</span>
+              <small class="step_duration">(0.157s)</small>
             </div>
             <div class="step_file">
-              <span>features/steps/login.py:6</span>
+              <span>features/steps/step_implementation.py:10</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>Enter username &quot;</span>
+                <b>randomuser@gmail.com</b>
+                <span>&quot; and password &quot;</span>
+                <b>Sgsits@1</b>
+                <span>&quot; and Click on login button</span>
+              </span>
+              <small class="step_duration">(1.479s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:34</span>
             </div>
             <span class="embed"/>
           </li>
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">Then </span>
-              <span class="step val">Enter username and password</span>
-              <small class="step_duration">(0.083s)</small>
+              <span class="step val">
+                <span>User with invalid credentials, username &quot;</span>
+                <b>randomuser@gmail.com</b>
+                <span>&quot; and password &quot;</span>
+                <b>Sgsits@1</b>
+                <span>&quot; should not be allowed to login to the D3A.io</span>
+              </span>
+              <small class="step_duration">(1.014s)</small>
             </div>
             <div class="step_file">
-              <span>features/steps/login.py:18</span>
+              <span>features/steps/step_implementation.py:61</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/d3a_basic_tests.feature:11</span>
+        <h3 onclick="Collapsible_toggle('scenario_1')">
+          <span class="val">Scenario Outline: Validate that a user with invalid credentials is unable to Login to D3A.io application -- @1.2 </span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_1">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">User navigates to login page of D3A.io application</span>
+              <small class="step_duration">(0.916s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:10</span>
             </div>
             <span class="embed"/>
           </li>
           <li class="step passed">
             <div class="step_name">
-              <span class="keyword">And </span>
-              <span class="step val">Click on login button</span>
-              <small class="step_duration">(0.000s)</small>
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>Enter username &quot;</span>
+                <b>randomuser@gmail.com</b>
+                <span>&quot; and password &quot;</span>
+                <b>Invalid@1</b>
+                <span>&quot; and Click on login button</span>
+              </span>
+              <small class="step_duration">(1.525s)</small>
             </div>
             <div class="step_file">
-              <span>features/steps/login.py:26</span>
+              <span>features/steps/step_implementation.py:34</span>
             </div>
             <span class="embed"/>
           </li>
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">Then </span>
-              <span class="step val">User must successfully logged in to the D3A.io application</span>
-              <small class="step_duration">(0.001s)</small>
+              <span class="step val">
+                <span>User with invalid credentials, username &quot;</span>
+                <b>randomuser@gmail.com</b>
+                <span>&quot; and password &quot;</span>
+                <b>Invalid@1</b>
+                <span>&quot; should not be allowed to login to the D3A.io</span>
+              </span>
+              <small class="step_duration">(1.023s)</small>
             </div>
             <div class="step_file">
-              <span>features/steps/login.py:31</span>
+              <span>features/steps/step_implementation.py:61</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/d3a_basic_tests.feature:20</span>
+        <h3 onclick="Collapsible_toggle('scenario_2')">
+          <span class="val">Scenario Outline: Validate that a valid user is able to Login to D3A.io application -- @1.1 </span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_2">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">User navigates to login page of D3A.io application</span>
+              <small class="step_duration">(0.970s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:10</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">
+                <span>Enter username &quot;</span>
+                <b>visitbodh@gmail.com</b>
+                <span>&quot; and password &quot;</span>
+                <b>Sgsits@1</b>
+                <span>&quot; and Click on login button</span>
+              </span>
+              <small class="step_duration">(0.876s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:34</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>User &quot;</span>
+                <b>visitbodh@gmail.com</b>
+                <span>&quot; with valid credentials should be successfully logged in to the D3A.io application</span>
+              </span>
+              <small class="step_duration">(0.215s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:70</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/d3a_basic_tests.feature:32</span>
+        <h3 onclick="Collapsible_toggle('scenario_3')">
+          <span class="val">Scenario Outline: Validate that a logged in user is able to create a project -- @1.1 </span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_3">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">Create Project is accessible via a link to the left panel second icon from the top</span>
+              <small class="step_duration">(0.988s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:79</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Click on Projects link</span>
+              <small class="step_duration">(0.276s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:87</span>
             </div>
             <span class="embed"/>
           </li>
           <li class="step passed">
             <div class="step_name">
               <span class="keyword">And </span>
-              <span class="step val">Landing page must be visible</span>
-              <small class="step_duration">(0.000s)</small>
+              <span class="step val">Click on NEW PROJECT button on the top right</span>
+              <small class="step_duration">(0.265s)</small>
             </div>
             <div class="step_file">
-              <span>features/steps/login.py:36</span>
+              <span>features/steps/step_implementation.py:95</span>
             </div>
             <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">
+                <span>Enter Name &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot;, Description &quot;</span>
+                <b>Project_for qa.description@12~ /';&quot;</b>
+                <span>&quot; and Click on ADD button displayed on New Project dialog box</span>
+              </span>
+              <small class="step_duration">(0.681s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:104</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>Created Project with Name &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot; and Description &quot;</span>
+                <b>Project_for qa.description@12~ /';&quot;</b>
+                <span>&quot; should be successfully listed</span>
+              </span>
+              <small class="step_duration">(0.622s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:115</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">
+                <span>User should be able to edit the Created Project &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(0.319s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:129</span>
+            </div>
+            <span class="embed"/>
+          </li>
+        </ol>
+        <span/>
+      </div>
+      <div class="scenario">
+        <span class="scenario_file">features/d3a_basic_tests.feature:44</span>
+        <h3 onclick="Collapsible_toggle('scenario_4')" class="failed">
+          <span class="val">Scenario Outline: Validate that a logged in user can create a simulation -- @1.1 </span>
+        </h3>
+        <ol class="scenario_steps" id="scenario_4">
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Given </span>
+              <span class="step val">
+                <span>User has created the Project &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot; successfully</span>
+              </span>
+              <small class="step_duration">(1.709s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:139</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">When </span>
+              <span class="step val">Click on expand project button</span>
+              <small class="step_duration">(0.082s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:148</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Click on NEW SIMULATION button for the selected project</span>
+              <small class="step_duration">(0.650s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:156</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">
+                <span>Provide simulation details such as simulation name &quot;</span>
+                <b>default simulationqa</b>
+                <span>&quot;, description &quot;</span>
+                <b>qa description</b>
+                <span>&quot;, project &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot;, no of spot market &quot;</span>
+                <b>3</b>
+                <span>&quot;, tick length &quot;</span>
+                <b>90</b>
+                <span>&quot;, market slot real time duration &quot;</span>
+                <b>900</b>
+                <span>&quot; on New Simulation screen</span>
+              </span>
+              <small class="step_duration">(1.945s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:163</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">Click on Projects link and expand project</span>
+              <small class="step_duration">(0.646s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:180</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step passed">
+            <div class="step_name">
+              <span class="keyword">Then </span>
+              <span class="step val">
+                <span>Created Simulation should be successfully listed for the selected Project &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot;, Simulation &quot;</span>
+                <b>default simulationqa</b>
+                <span>&quot;, &quot;</span>
+                <b>qa description</b>
+                <span>&quot; and market count &quot;</span>
+                <b>3</b>
+                <span>&quot;</span>
+              </span>
+              <small class="step_duration">(0.442s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:189</span>
+            </div>
+            <span class="embed"/>
+          </li>
+          <li class="step failed">
+            <div class="step_name">
+              <span class="keyword">And </span>
+              <span class="step val">
+                <span>Created Simulation should also be successfully listed under the selected Project &quot;</span>
+                <b>Project_for qa!123 /'&quot;&quot;,.</b>
+                <span>&quot; by searching the project</span>
+              </span>
+              <small class="step_duration">(0.854s)</small>
+            </div>
+            <div class="step_file">
+              <span>features/steps/step_implementation.py:210</span>
+            </div>
+            <span class="embed">
+              <a onclick="Collapsible_toggle('embed_1')">Error Message</a>
+              <pre id="embed_1" style="display: none">Traceback (most recent call last):
+  File &quot;c:\users\dell\appdata\local\programs\python\python39\lib\site-packages\behave\model.py&quot;, line 1329, in run
+    match.run(runner.context)
+  File &quot;c:\users\dell\appdata\local\programs\python\python39\lib\site-packages\behave\matchers.py&quot;, line 98, in run
+    self.func(context, *args, **kwargs)
+  File &quot;features\steps\step_implementation.py&quot;, line 215, in verify_simulation_list_by_search
+    assert context.driver.find_element_by_css_selector(locator_resources.saved_projects_empty_list_css).text != 'No simulations to show for this project'
+AssertionError
+</pre>
+                  
+            </span>
           </li>
         </ol>
         <span/>
