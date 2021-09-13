@@ -6,6 +6,8 @@ Preferably writing the testcases in Gherkin syntax (given/when/then).
 Given solution used follwing technology stack:
 Selenium, Python, BDD (behave), PyCharm, GitHub, GitHub actions for CI, Behave/Allure test reports, Windows/Mac/Linux
 
+Google docs link: https://docs.google.com/document/d/1tvvROg6gFdr_UnavcBNQPUw9X8S_F9W9nZSdUEBtt3Q/edit?usp=sharing
+
 Below is the information of planned features and tests:
 
 
