@@ -9,20 +9,19 @@ Selenium, Python, BDD (behave), PyCharm, GitHub, GitHub actions for CI, Behave/A
 Google docs link: https://docs.google.com/document/d/1tvvROg6gFdr_UnavcBNQPUw9X8S_F9W9nZSdUEBtt3Q/edit?usp=sharing
 
 
-Below is the information of planned features and tests:
 
+
+Below is the information of planned features and tests:
 
 Feature: Test basic operations of d3a.io
 
-
   Scenario Outline: Validate that a user with invalid credentials is unable to Login to D3A.io application
-  
   Scenario Outline: Validate that a valid user is able to Login to D3A.io application
-   
   Scenario Outline: Validate that a logged in user is able to create a project
-  
   Scenario Outline: Validate that a logged in user can create a simulation
  
+
+
 
 
 Following are the bugs\observations, encountered while executing automation tests.
