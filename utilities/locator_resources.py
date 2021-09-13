@@ -50,3 +50,7 @@ class locator_resources():
     button_new_modelling_list_xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[3]/button[1]"
     setting_button_new_modelling_list_xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[4]/div[1]/button[1]"
     simulation_listing_content_by_search_xpath = "//div[contains(@class,'ProjectsPage')]//div[1]//div[1]//div[1]//span[1]//div[2]"
+    search_project_by_xpath = "//header/div[2]/input[1]"
+    setting_button_by_xpath = "//button[@class='button button--light-blue button-icon button--icon-only']"
+    delete_button_by_xpath = "//p[normalize-space()='Delete']"
+    confirm_delete_button_by_xpath = "//body/div[7]/div[1]/div[1]/div[2]/div[1]/button[2]/span[1]"

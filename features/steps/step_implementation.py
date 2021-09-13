@@ -241,5 +241,13 @@ def verify_simulation_list_by_search(context, project_name):
     assert context.driver.find_element_by_css_selector(locator_resources.saved_projects_list_css).is_displayed()
     assert context.driver.find_element_by_xpath(
         locator_resources.simulation_listing_content_by_search_xpath).text is not None
-    assert context.driver.find_element_by_css_selector(
-        locator_resources.saved_projects_empty_list_css).text != 'No simulations to show for this project'
+
+    if context.driver.find_element_by_css_selector(
+            locator_resources.saved_projects_empty_list_css).text == 'No simulations to show for this project':
+        context.driver.find_element_by_xpath(locator_resources.search_project_by_xpath).send_keys(project_name)
+        context.driver.find_element_by_xpath(locator_resources.setting_button_by_xpath).click()
+        context.driver.find_element_by_xpath(locator_resources.delete_button_by_xpath).click()
+        context.driver.find_element_by_xpath(locator_resources.confirm_delete_button_by_xpath).click()
+        context.driver.implicitly_wait(2)
+
+        assert False, 'No simulations to show for this project'
