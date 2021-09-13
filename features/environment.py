@@ -15,7 +15,7 @@ def before_feature(context, feature):
 def before_scenario(context, scenario):
     context.chrome_options = Options()
     context.chrome_options.add_argument("--headless")
-    # context.chrome_options.add_argument("--window-size=1920x1080")
+    context.chrome_options.add_argument("--window-size=1920x1080")
     context.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=context.chrome_options)
     context.driver.get(get_config()['Application']['url'])
 
