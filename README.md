@@ -7,6 +7,7 @@ Preferably writing the testcases in Gherkin syntax (given/when/then).
 
 Given solution used follwing technology stack:
 Selenium, Python, BDD (behave), PyCharm, GitHub, GitHub actions for CI, Behave/Allure test reports, Windows/Mac/Linux
+
 Test execution command:
 behave -f behave_html_formatter:HTMLFormatter -o reports/behave-test-report.html features
 
