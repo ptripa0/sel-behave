@@ -12,13 +12,13 @@ behave -f behave_html_formatter:HTMLFormatter -o reports/behave-test-report.html
 
 
 Below is the information of planned features and tests:
-
+\n
 Feature: Test basic operations of d3a.io
-
-  Scenario Outline: Validate that a user with invalid credentials is unable to Login to D3A.io application
-  Scenario Outline: Validate that a valid user is able to Login to D3A.io application
-  Scenario Outline: Validate that a logged in user is able to create a project
-  Scenario Outline: Validate that a logged in user can create a simulation
+\n
+  Scenario Outline: Validate that a user with invalid credentials is unable to Login to D3A.io application\n
+  Scenario Outline: Validate that a valid user is able to Login to D3A.io application\n
+  Scenario Outline: Validate that a logged in user is able to create a project\n
+  Scenario Outline: Validate that a logged in user can create a simulation\n
  
 
 
