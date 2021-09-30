@@ -20,7 +20,3 @@ Feature: Test basic operations of d3a.io
   Scenario Outline: Validate that a logged in user is able to create a project
   Scenario Outline: Validate that a logged in user can create a simulation
  
-
-
-
-
